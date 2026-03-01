@@ -18,8 +18,10 @@ const menuItems: MenuItem[] = [
     label: 'পণ্য সমূহ',
     icon: '📦',
     children: [
-      { label: 'পণ্য তালিকা', href: '/products', icon: '📋' },
+      { label: 'নতুন পণ্য', href: '/dashboard/products/new', icon: '➕' },
+      { label: 'স্টক পরিবর্তন', href: '/dashboard/products/stock-change', icon: '🔄', badge: true },
     ],
+    href: '/dashboard/products',
   },
   { label: 'পার্টি সমূহ', href: '/dashboard/parties', icon: '👥', badge: true },
   {
@@ -27,17 +29,20 @@ const menuItems: MenuItem[] = [
     icon: '🛒',
     children: [
       { label: 'নতুন বিক্রয়', href: '/dashboard/sales/new', icon: '➕' },
-      { label: 'বিক্রয় তালিকা', href: '/dashboard/sales', icon: '📋' },
+      { label: 'বিক্রি রিটার্ন', href: '/dashboard/sales/returns', icon: '↩️', badge: true },
+      { label: 'বাকি আদায়', href: '/dashboard/sales/due-collection', icon: '💰', badge: true },
     ],
+    href: '/dashboard/sales',
   },
   {
     label: 'ক্রয়',
     icon: '🛍️',
     children: [
-      { label: 'নতুন ক্রয়', href: '/dashboard/purchases/new', icon: '➕' },
-      { label: 'ক্রয় রিটার্ন', href: '/dashboard/purchases/returns', icon: '↩️' },
-      { label: 'বাকি পরিশোধ', href: '/dashboard/purchases/due-payment', icon: '💰', badge: true },
+      { label: 'নতুন ক্রয়', href: '/dashboard/purchase/new', icon: '➕' },
+      { label: 'ক্রয় রিটার্ন', href: '/dashboard/purchase/returns', icon: '↩️', badge: true },
+      { label: 'বাকি পরিশোধ', href: '/dashboard/purchase/due-payment', icon: '💰', badge: true },
     ],
+    href: '/dashboard/purchase',
   },
   {
     label: 'খরচ',
